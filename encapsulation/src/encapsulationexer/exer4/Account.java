@@ -7,4 +7,7 @@ package encapsulationexer.exer4;
  * @Date 2024/9/28
  */
 public class Account {
+    public static void main(String[] args) {
+        System.out.println("git测试");
+    }
 }
