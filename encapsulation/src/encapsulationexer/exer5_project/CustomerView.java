@@ -164,7 +164,7 @@ public class CustomerView {
             }
         }
 
-        System.out.println("-------------------------客户列表完成-------------------------");
+        System.out.println("--------------------------客户列表完成--------------------------");
     }
     public static void main(String[] args){
         CustomerView customerView = new CustomerView();
