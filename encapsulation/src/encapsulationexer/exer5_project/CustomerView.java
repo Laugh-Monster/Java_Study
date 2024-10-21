@@ -165,6 +165,7 @@ public class CustomerView {
         }
 
         System.out.println("--------------------------客户列表完成--------------------------");
+        //测试git
     }
     public static void main(String[] args){
         CustomerView customerView = new CustomerView();
