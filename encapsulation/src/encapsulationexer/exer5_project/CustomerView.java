@@ -1,10 +1,10 @@
 package encapsulationexer.exer5_project;
 
 /**
- * @ClassName:CustomerView
- * @Description
- * @Author Laugh_Monster
- * @Date 2024/10/21
+ * @ ClassName :CustomerView
+ * @ Description
+ * @ Author Laugh_Monster
+ * @ Date 2024/10/21
  */
 public class CustomerView {
     CustomerList customerList = new CustomerList(10);
@@ -18,7 +18,7 @@ public class CustomerView {
             System.out.println("                   3 删 除 客 户");
             System.out.println("                   4 客 户 列 表");
             System.out.println("                   5 退       出\n");
-            System.out.print("                   请选择(1-5)：");
+            System.out.print("                   请选择 (1-5)：");
 
             char key = CMUtility.readMenuSelection();
             switch (key){
@@ -35,7 +35,7 @@ public class CustomerView {
                     listAllCustomers();
                     break;
                 case '5':
-                    System.out.print("确认是否退出(Y/N)：");
+                    System.out.print("确认是否退出 (Y/N)：");
                     char isExit = CMUtility.readConfirmSelection();
                     if (isExit == 'Y'){
                         isFlag = false;
@@ -67,7 +67,7 @@ public class CustomerView {
             System.out
                     .println("---------------------添加完成---------------------");
         } else {
-            System.out.println("----------------记录已满,无法添加-----------------");
+            System.out.println("----------------记录已满，无法添加-----------------");
         }
 
 
@@ -76,10 +76,10 @@ public class CustomerView {
     private void modifyCustomer() {
         System.out.println("---------------------修改客户---------------------");
 
-        int index = 0;
-        Customer cust = null;
+        int index;
+        Customer cust;
         for (;;) {
-            System.out.print("请选择待修改客户编号(-1退出)：");
+            System.out.print("请选择待修改客户编号 (-1 退出)：");
             index = CMUtility.readInt();
             if (index == -1) {
                 return;
@@ -92,19 +92,19 @@ public class CustomerView {
                 break;
         }
 
-        System.out.print("姓名(" + cust.getName() + ")：");
+        System.out.print("姓名 (" + cust.getName() + ")：");
         String name = CMUtility.readString(4, cust.getName());
 
-        System.out.print("性别(" + cust.getGender() + ")：");
+        System.out.print("性别 (" + cust.getGender() + ")：");
         char gender = CMUtility.readChar(cust.getGender());
 
-        System.out.print("年龄(" + cust.getAge() + ")：");
+        System.out.print("年龄 (" + cust.getAge() + ")：");
         int age = CMUtility.readInt(cust.getAge());
 
-        System.out.print("电话(" + cust.getPhone() + ")：");
+        System.out.print("电话 (" + cust.getPhone() + ")：");
         String phone = CMUtility.readString(15, cust.getPhone());
 
-        System.out.print("邮箱(" + cust.getEmail() + ")：");
+        System.out.print("邮箱 (" + cust.getEmail() + ")：");
         String email = CMUtility.readString(15, cust.getEmail());
 
         cust = new Customer(name, gender, age, phone, email);
@@ -114,17 +114,17 @@ public class CustomerView {
             System.out
                     .println("---------------------修改完成---------------------");
         } else {
-            System.out.println("----------无法找到指定客户,修改失败--------------");
+            System.out.println("----------无法找到指定客户，修改失败--------------");
         }
     }
 
     private void deleteCustomer() {
         System.out.println("---------------------删除客户---------------------");
 
-        int index = 0;
-        Customer cust = null;
+        int index;
+        Customer cust;
         for (;;) {
-            System.out.print("请选择待删除客户编号(-1退出)：");
+            System.out.print("请选择待删除客户编号 (-1 退出)：");
             index = CMUtility.readInt();
             if (index == -1) {
                 return;
@@ -137,7 +137,7 @@ public class CustomerView {
                 break;
         }
 
-        System.out.print("确认是否删除(Y/N)：");
+        System.out.print("确认是否删除 (Y/N)：");
         char yn = CMUtility.readConfirmSelection();
         if (yn == 'N')
             return;
@@ -147,7 +147,7 @@ public class CustomerView {
             System.out
                     .println("---------------------删除完成---------------------");
         } else {
-            System.out.println("----------无法找到指定客户,删除失败--------------");
+            System.out.println("----------无法找到指定客户，删除失败--------------");
         }
     }
 
@@ -165,8 +165,9 @@ public class CustomerView {
         }
 
         System.out.println("--------------------------客户列表完成--------------------------");
-        //测试git
-        //17.43宿舍测试
+        //测试 git
+        //17.43 宿舍测试
+        // 10 月 24 日，9.14 201 连接远程仓库测试
     }
     public static void main(String[] args){
         CustomerView customerView = new CustomerView();
